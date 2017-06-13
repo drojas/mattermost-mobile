@@ -11,5 +11,9 @@ export function stripTrailingSlashes(url) {
 }
 
 export function removeProtocol(url) {
-    return url.replace(/(^\w+:|^)\/\//, '');
+    if (url) {
+        return url.replace(/(^\w+:|^)\/\//, '');
+    }
+
+    return null;
 }
